@@ -64,9 +64,12 @@ jobs:
           
       - name: Authenticate with Heroku
         run: |
-          echo "machine api.heroku.com" > ~/.netrc
-          echo "  login ${{ secrets.HEROKU_EMAIL }}" >> ~/.netrc
-          echo "  password ${{ secrets.HEROKU_API_KEY }}" >> ~/.netrc
+        echo "machine api.heroku.com" > ~/.netrc
+        echo "  login ${{ secrets.HEROKU_EMAIL }}" >> ~/.netrc
+        echo "  password ${{ secrets.HEROKU_API_KEY }}" >> ~/.netrc
+        echo "machine git.heroku.com" >> ~/.netrc
+        echo "  login ${{ secrets.HEROKU_EMAIL }}" >> ~/.netrc
+        echo "  password ${{ secrets.HEROKU_API_KEY }}" >> ~/.netrc
 
       - name: Create Heroku App (If doesn't exist)
         run: |
