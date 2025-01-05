@@ -78,7 +78,7 @@ jobs:
       - name: Push to Heroku
         run: |
           git remote add heroku https://git.heroku.com/iris-deploy.git
-          git push heroku main
+          git push heroku master
 
       - name: Open Heroku App
         run: |
