@@ -57,6 +57,11 @@ jobs:
         run: |
           pip install -r requirements.txt
 
+      # Unshallow the repository
+      - name: Unshallow the repository
+        run: |
+          git fetch --all --unshallow
+
       # Heroku Deployment Steps
       - name: Install Heroku CLI
         run: |
