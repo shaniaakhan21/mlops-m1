@@ -79,10 +79,6 @@ jobs:
       - name: Create Heroku App (If doesn't exist)
         run: |
           heroku create iris-deploy || echo "App already exists"
-
-      - name: Create initial commit if none exist
-        run: |
-          git commit --allow-empty -m "Initial commit"
         
       - name: Push to Heroku
         run: |
