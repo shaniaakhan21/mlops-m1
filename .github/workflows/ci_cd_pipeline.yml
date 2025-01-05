@@ -64,7 +64,7 @@ jobs:
           
       - name: Authenticate with Heroku
         run: |
-          echo ${{ secrets.HEROKU_API_KEY }} | heroku auth:token
+          echo ${{ secrets.HEROKU_API_KEY }} | heroku auth:login
 
       - name: Create Heroku App (If doesn't exist)
         run: |
