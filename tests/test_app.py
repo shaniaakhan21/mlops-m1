@@ -1,5 +1,9 @@
 import pytest
 from app import app  # Import your Flask app
+import sys
+sys.path.insert(0, os.path.abspath(os.path.dirname(__file__)))
+import os
+from app import app
 
 
 @pytest.fixture
@@ -19,5 +23,4 @@ def test_predict(client):
     # Assert that the response contains a prediction key
     json_data = response.get_json()
     assert 'prediction' in json_data
-
 
