@@ -60,7 +60,7 @@ jobs:
       # Heroku Deployment Steps
       - name: Install Heroku CLI
         run: |
-          curl https://cli-assets.heroku.com/install.sh | sh
+          echo https://cli-assets.heroku.com/install.sh | sh
           
       - name: Authenticate with Heroku
         run: |
