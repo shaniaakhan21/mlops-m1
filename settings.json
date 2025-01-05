@@ -1,6 +1,0 @@
-{
-    "python.linting.enabled": true,
-    "python.linting.flake8Enabled": true,
-    "python.linting.pylintEnabled": false,  // If you don't want to use pylint
-    "python.linting.mypyEnabled": false     // Optional: disable mypy if not needed
-}
